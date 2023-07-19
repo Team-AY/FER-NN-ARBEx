@@ -5,7 +5,7 @@
 
 [![](https://img.shields.io/badge/Paper-Page-blue)](https://azminewasi.github.io/research/paper/arbex/)
 [![](https://img.shields.io/badge/arXiv-Page-8f1a0d)](https://arxiv.org/abs/2305.01486)
-[![](https://img.shields.io/badge/Donload-PDF-cf1804)](https://arxiv.org/pdf/2305.01486)
+[![](https://img.shields.io/badge/Download-PDF-cf1804)](https://arxiv.org/pdf/2305.01486)
 [![](https://img.shields.io/badge/Youtube-Video-fc002a)](https://www.youtube.com/watch?v=I4HxYUhVd18&t=31s)
 [![](https://img.shields.io/badge/Papers-with_Code-00708f)](https://paperswithcode.com/paper/arbex-attentive-feature-extraction-with)
 
