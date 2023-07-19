@@ -1,6 +1,13 @@
 ## [ARBEx: Attentive Feature Extraction with Reliability Balancing for Robust Facial Expression Learning](https://arxiv.org/abs/2305.01486)
 ### [Azmine Toushik Wasi](https://azminewasi.github.io/)\*, [Karlo Serbetar](https://www.linkedin.com/in/%C5%A1ekarlo/)\*, [Raima Islam](https://www.linkedin.com/in/raima-islam-310567206/)\*, [Taki Hasan Rafi](https://takihasan.github.io/)\*, and [Dong-Kyu Chae](https://dkchae.github.io/)
 
+---
+
+[![](https://img.shields.io/badge/Paper-Page-blue)](https://azminewasi.github.io/research/paper/arbex/)
+[![](https://img.shields.io/badge/arXiv-Page-8f1a0d)](https://arxiv.org/abs/2305.01486)
+[![](https://img.shields.io/badge/Donload-PDF-cf1804)](https://arxiv.org/pdf/2305.01486)
+[![](https://img.shields.io/badge/Youtube-Video-fc002a)](https://www.youtube.com/watch?v=I4HxYUhVd18&t=31s)
+[![](https://img.shields.io/badge/Papers-with_Code-00708f)](https://paperswithcode.com/paper/arbex-attentive-feature-extraction-with)
 
 ---
 #### Our model has scored State-of-the-Art performances in multiple datasets as per [Papers with Code](https://paperswithcode.com/paper/arbex-attentive-feature-extraction-with).
