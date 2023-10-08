@@ -10,10 +10,9 @@
 [![](https://img.shields.io/badge/Papers-with_Code-00708f)](https://paperswithcode.com/paper/arbex-attentive-feature-extraction-with)
 
 ---
-#### Our model has scored State-of-the-Art performances in multiple datasets as per [Papers with Code](https://paperswithcode.com/paper/arbex-attentive-feature-extraction-with).
-- RAF-DB : [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/arbex-attentive-feature-extraction-with/facial-expression-recognition-on-raf-db)](https://paperswithcode.com/sota/facial-expression-recognition-on-raf-db?p=arbex-attentive-feature-extraction-with)
-- FER+ : [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/arbex-attentive-feature-extraction-with/facial-expression-recognition-on-fer-1)](https://paperswithcode.com/sota/facial-expression-recognition-on-fer-1?p=arbex-attentive-feature-extraction-with)
-- JAFFE: [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/arbex-attentive-feature-extraction-with/facial-expression-recognition-on-jaffe)](https://paperswithcode.com/sota/facial-expression-recognition-on-jaffe?p=arbex-attentive-feature-extraction-with)
+
+For any questions, please contact to : `takihr@hanyang.ac.kr`
+
 ---
 
 ## Architecture
