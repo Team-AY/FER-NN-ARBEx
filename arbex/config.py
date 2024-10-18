@@ -2,29 +2,27 @@
 # -*- coding: utf-8 -*-
 
 class BaseConfig():
-    DIR_IMG = '../../_DATA/crops_aligned/crops_aligned'
-    DIR_ANN_TRAIN = '../../_DATA/annotations/EXPR_Classification_Challenge/Train_Set'
-    DIR_ANN_DEV = '../../_DATA/annotations/EXPR_Classification_Challenge/Validation_Set'
+    DIR_IMG = '/content/drive/MyDrive/Final Project/Databases/fer-2013/images'
+    DIR_ANN_TRAIN = '/content/drive/MyDrive/Final Project/Databases/fer-2013/EmoLabel/Training.txt'
+    DIR_ANN_DEV = '/content/drive/MyDrive/Final Project/Databases/fer-2013/EmoLabel/Test.txt'
     # index to class mapping
     index2class = {
-            0: 'neutral',
-            1: 'anger',
-            2: 'disgust',
-            3: 'fear',
+            7: 'neutral',
+            6: 'anger',
+            3: 'disgust',
+            2: 'fear',
             4: 'happiness',
             5: 'sadness',
-            6: 'surprise',
-            7: 'other',
+            1: 'surprise',
             }
 
     # class to index mapping
     class2index = {
-             'neutral': 0,
-             'anger': 1,
-             'disgust': 2,
-             'fear': 3,
+             'neutral': 7,
+             'anger': 6,
+             'disgust': 3,
+             'fear': 2,
              'happiness': 4,
              'sadness': 5,
-             'surprise': 6,
-             'other': 7,
+             'surprise': 1,
             }
