@@ -288,13 +288,13 @@ def main():
     parser.add_argument(
             '--path-mobilefacenet',
             type=str,
-            default='models/pretrained/mobilefacenet.pth',
+            default='arbex/models/pretrained/mobilefacenet.pth',
             help='location of state dict for pretrained mobilefacenet'
             )
     parser.add_argument(
             '--path-ir50',
             type=str,
-            default='models/pretrained/ir50.pth',
+            default='arbex/models/pretrained/ir50.pth',
             help='location of state dict for pretrained ir50'
             )
     parser.add_argument(
