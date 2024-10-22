@@ -36,7 +36,7 @@ def train(config):
     num_iters = config['num_iters']
     test_set_correction = config['test_set_correction']
     # data
-    data_maker = config['data_maker']
+    #data_maker = config['data_maker']
     loader_train = config['loader_train']
     loader_dev = config['loader_dev']
     batch_size = config['batch_size']
@@ -324,7 +324,7 @@ def main():
     parser.add_argument(
             '--num-classes',
             type=int,
-            default=8,
+            default=7,
             help='number of classes in dataset'
             )
     parser.add_argument(
@@ -514,7 +514,7 @@ def main():
             batch_size=args.batch_size, image_size=args.size_img,)
     config['loader_dev'] = data.get_dataloader_dev(
             batch_size=args.batch_size * 2, image_size=args.size_img,)
-    config['data_maker'] = data.get_datamaker()
+    #config['data_maker'] = data.get_datamaker()
 
     # save hypeparams to log
     hparam_dict = {'lr_vit': config['lr_vit'],

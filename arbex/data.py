@@ -42,30 +42,31 @@ class AffWildDataset(Dataset):
 
     # index to class mapping
     index2class = {
-            0: 'neutral',
-            1: 'anger',
-            2: 'disgust',
-            3: 'fear',
+
+            1: 'surprise',
+            2: 'fear',
+            3: 'disgust',
             4: 'happiness',
             5: 'sadness',
-            6: 'surprise',
-            7: 'contempt',
+            6: 'anger',
+            7: 'neutral',
             }
 
     # class to index mapping
     class2index = {
-             'neutral': 0,
-             'anger': 1,
-             'disgust': 2,
-             'fear': 3,
+             
+             'surprise': 1,
+             'fear': 2,
+             'disgust': 3,
              'happiness': 4,
              'sadness': 5,
-             'surprise': 6,
-             'contempt': 7,
+             'anger': 6,
+             'neutral': 7,
+             
             }
 
 
-    def __init__(self, dir_img, dir_txt, transform=None, verbose=False,
+    def __init__(self, dir_img, dir_txt, transform=None, verbose=True,
                  items_to_keep=None):
         """
         Args:
@@ -117,19 +118,11 @@ class AffWildDataset(Dataset):
             if items_to_keep is not None and f_name not in items_to_keep:
                 continue
             # load labels
-            y = np.loadtxt(f, skiprows=1, dtype=int)  # skip first row
+            x, y = f.split()
+            #y = np.loadtxt(f, skiprows=1, dtype=int)  # skip first row
             # load images
-            x = get_all_ext_in_dir(os.path.join(self.dir_img, f_name), ('jpg', ))
+            x = get_all_ext_in_dir(os.path.join(self.dir_img, x), ('jpg', ))
             x = np.array(x)
-            # keep only frames for which images exist
-            # frame {i} is named {i:05d}.jpg, starting from 1
-            x_int = np.array([int(i.split('/')[-1].split('.')[-2]) - 1
-                              for i in x])
-            y = y[x_int]
-
-            index = y != -1  # ignore frames with label -1
-            x = x[index]
-            y = y[index]
 
             xs.append(x)
             ys.append(y)
@@ -250,32 +243,33 @@ class AffWildDatasetDev(Dataset):
     Dataset for AffWild2
     """
 
-    # index to class mapping
+     # index to class mapping
     index2class = {
-            0: 'neutral',
-            1: 'anger',
-            2: 'disgust',
-            3: 'fear',
+
+            1: 'surprise',
+            2: 'fear',
+            3: 'disgust',
             4: 'happiness',
             5: 'sadness',
-            6: 'surprise',
-            7: 'contempt',
+            6: 'anger',
+            7: 'neutral',
             }
 
     # class to index mapping
     class2index = {
-             'neutral': 0,
-             'anger': 1,
-             'disgust': 2,
-             'fear': 3,
+             
+             'surprise': 1,
+             'fear': 2,
+             'disgust': 3,
              'happiness': 4,
              'sadness': 5,
-             'surprise': 6,
-             'contempt': 7,
+             'anger': 6,
+             'neutral': 7,
+             
             }
 
 
-    def __init__(self, dir_img, dir_txt, transform=None, verbose=False,
+    def __init__(self, dir_img, dir_txt, transform=None, verbose=True,
                  items_to_keep=None):
         """
         Args:
@@ -327,20 +321,13 @@ class AffWildDatasetDev(Dataset):
             if items_to_keep is not None and f_name not in items_to_keep:
                 continue
             # load labels
-            y = np.loadtxt(f, skiprows=1, dtype=int)  # skip first row
+
+            x, y = f.split()
+            #y = np.loadtxt(f, skiprows=1, dtype=int)  # skip first row
             # load images
-            x = get_all_ext_in_dir(os.path.join(self.dir_img, f_name), ('jpg', ))
+            x = get_all_ext_in_dir(os.path.join(self.dir_img, x), ('jpg', ))
             x = np.array(x)
-            # keep only frames for which images exist
-            # frame {i} is named {i:05d}.jpg, starting from 1
-            x_int = np.array([int(i.split('/')[-1].split('.')[-2]) - 1
-                              for i in x])
-            y = y[x_int]
-
-            index = y != -1  # ignore frames with label -1
-            x = x[index]
-            y = y[index]
-
+            
             xs.append(x)
             ys.append(y)
             base_files.extend([f_name] * len(x))
@@ -735,7 +722,7 @@ def get_dataloader_dev(config=BaseConfig, batch_size=32, shuffle=True,
     return loader
 
 
-def dir_to_df(dir_img, dir_ann):
+#def dir_to_df(dir_img, dir_ann):
     """
     Make a DataFrame with paths to images, labels and original video name
 
@@ -793,7 +780,7 @@ def dir_to_df(dir_img, dir_ann):
     df.to_csv(save_file)
 
 
-def make_label_file(dir_img, dir_ann, save_file):
+#def make_label_file(dir_img, dir_ann, save_file):
     """
     Make a .csv file containing all paths to images and their labels
 
@@ -922,6 +909,6 @@ class DataMaker():
 def get_datamaker(config=BaseConfig):
     dir_img = config.DIR_IMG
     dir_ann = config.DIR_ANN_TRAIN
-    df = dir_to_df(dir_img, dir_ann)
-    data_maker = DataMaker(df)
+    #df = dir_to_df(dir_img, dir_ann)
+    #data_maker = DataMaker(df)
     return data_maker
